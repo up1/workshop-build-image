@@ -1,7 +1,9 @@
 FROM node:25 AS step1
 WORKDIR /myapp
 COPY package*.json ./
-RUN npm install
+
+RUN npm config set registry "http://host.docker.internal:8081/repository/demo01"
+RUN npm --loglevel info install
 COPY . .
 RUN npm run build
 RUN ls /myapp/

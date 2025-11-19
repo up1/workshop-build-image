@@ -17,6 +17,7 @@ Access to http://localhost:8888
   * Login -> Create a new repository
     * npm (proxy)
       * name=demo01
+      * https://registry.npmjs.org/
 
 ```
 $docker compose up -d mirror
