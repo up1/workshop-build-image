@@ -6,3 +6,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8888:80"
+
+  mirror:
+    image: sonatype/nexus3
+    ports:
+      - "8081:8081"
