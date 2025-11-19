@@ -1,0 +1,8 @@
+services:
+  reactjs:
+    image: somkiat/react:5.0
+    build:
+      context: ./demo01
+      dockerfile: Dockerfile
+    ports:
+      - "8888:80"
