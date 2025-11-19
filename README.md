@@ -12,6 +12,7 @@ $docker compose ps
 Access to http://localhost:8888
 
 ## 2. Mirror site of NPM package
+* [Verdaccio](https://verdaccio.org/)
 * [Sonatype Nexus Repository ](https://help.sonatype.com/en/download.html)
   * Login -> Create a new repository
     * npm (proxy)
