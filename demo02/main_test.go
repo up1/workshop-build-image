@@ -30,7 +30,7 @@ func TestHelloHandler(t *testing.T) {
 	var response map[string]string
 	err = json.Unmarshal(rec.Body.Bytes(), &response)
 	assert.NoError(t, err)
-	assert.Equal(t, "Hello, World!", response["message"])
+	assert.Equal(t, "Hello, World!2", response["message"])
 }
 
 func TestHelloHandlerWithEchoServer(t *testing.T) {
