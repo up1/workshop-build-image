@@ -1,9 +1,8 @@
 package main
 
 import (
-	"net/http"
-
 	"github.com/labstack/echo/v4"
+	"net/http"
 )
 
 // setupRoutes configures all the routes for the Echo server
