@@ -29,3 +29,17 @@ services:
       - SONAR_PROJECT_BASE_DIR=/app
     volumes:
       - ./demo02:/app
+
+  sbom_generator_reactjs:
+    image: node:25
+    volumes:
+      - ./demo01:/app
+    working_dir: /app
+    command: ["/bin/sh", "-c", "npm install --global @cyclonedx/cyclonedx-npm && cyclonedx-npm -o sbom-reactjs.json"]
+
+  sbom_generator_go:
+    image: golang:1.25
+    volumes:
+      - ./demo02:/app
+    working_dir: /app
+    command: ["/bin/sh", "-c", "go install github.com/CycloneDX/cyclonedx-gomod/cmd/cyclonedx-gomod@latest && cyclonedx-gomod mod -json -output sbom-go.json"]
