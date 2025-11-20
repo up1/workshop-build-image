@@ -4,6 +4,7 @@ COPY . .
 RUN go mod tidy
 RUN go build -o demo main.go
 
+
 FROM alpine:3.22
 WORKDIR /app
 COPY --from=step1 /app/demo .
