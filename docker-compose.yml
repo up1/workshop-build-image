@@ -57,3 +57,9 @@ services:
     tty: true
     volumes:
       - ./api_test:/etc/newman/newman
+  
+  ui_test:
+    build: ./ui_test
+    tty: true
+    volumes:
+      - ./ui_test:/app/report
