@@ -4,16 +4,16 @@ services:
     build:
       context: ./demo01
       dockerfile: Dockerfile
-    ports:
-      - "8888:80"
+    # ports:
+    #   - "8888:80"
   
   go:
     image: somkiat/go:1.0
     build:
       context: ./demo02
       dockerfile: Dockerfile
-    ports:
-      - "1323:1323"
+    # ports:
+    #   - "1323:1323"
 
   mirror:
     image: sonatype/nexus3
