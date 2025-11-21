@@ -14,7 +14,7 @@ test('Click 2 times', async ({ page }) => {
 
   // Click #root > div.card > button twice
   await page.locator('#root > div.card > button').click();
-  await page.locator('#root > div.card > button').click();
+  // await page.locator('#root > div.card > button').click();
 
   // Expect #root > div.card > button to contain text 'count is 2'
   await expect(page.locator('#root > div.card > button')).toHaveText('count is 2');
